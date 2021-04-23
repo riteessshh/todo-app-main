@@ -1,36 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Todo app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
-
-  Todo
-
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="background background-dark">
+    <img src="images/bg-mobile-dark.jpg" class="background-img img-dark dark-bg" alt="">
+    <img src="images/bg-mobile-light.jpg" class="background-img img-light light-bg" alt="">
   </div>
+
+  <div class="main-section">
+    <div class="heading-section">
+      <h1>Todo</h1>
+      <img src="images/icon-sun.svg" class="sun-ico dark-bg"alt="">
+      <img src="images/icon-moon.svg" class="moon-ico light-bg"alt="">
+    </div>
+    <div class="body-section">
+      <div class="input-section dark-theme">
+        <div class="checkbox-div">
+          <input type="radio" class="checkbox" name="" value="">
+        </div>
+        <input type="text" class="input-area dark-theme" name="" value="" placeholder="Add Task">
+      </div>
+      <div class="display-section">
+        <div class="list">
+          <div class="list1 dark-theme">
+            <div class="checkbox-div">
+              <input type="radio" class="checkbox" name="" value="">
+            </div>
+            <p>Hello</p>
+            <img class="close-icon" src="images/icon-cross.svg" alt="">
+          </div>
+          <p>Clear Completed</p>
+        </div>
+        <div class="functions dark-theme">
+          <p>All</p>
+          <p>Active</p>
+          <p>Completed</p>
+        </div>
+      </div>
+    </div>
+
+    <p style="text-align:center;">Drag and drop to reorder list</p>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="app.js" charset="utf-8"></script>
 </body>
+
 </html>

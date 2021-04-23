@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+}
+
+.background {
+  position: relative;
+  height: 800px;
+}
+
+.background-dark {
+  background: #161722;
+}
+
+.background-light {
+  background: white;
+}
+
+.background-img {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.main-section {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+}
+
+.heading-section {
+  color: white;
+  height: 50px;
+}
+
+.sun-ico {
+  position: absolute;
+  top: 9%;
+  right: 0;
+}
+
+.moon-ico {
+  position: absolute;
+  top: 9%;
+  right: 0;
+}
+
+.dark-bg {
+  display: block;
+}
+
+.light-bg {
+  display: none;
+}
+
+.input-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-column-gap: 0;
+  margin-bottom: 20px;
+}
+
+.dark-theme {
+  color: white;
+  background: #25273c;
+}
+
+.light-theme {
+  color: #484b6a;
+  background: white;
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  left: 30%;
+  align-items: center;
+  width: 40%;
+  bottom: 3%;
+  background-color: inherit;
+}
+
+.checkbox-div {
+  position: relative;
+}
+
+.input-area {
+  display: inline;
+}
+
+input {
+  border: 0;
+  width: 90%;
+  height: 3rem;
+  padding-left: 10px;
+}
+
+.list1 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 1fr 30px;
+  grid-column-gap: 0;
+}
+
+.close-icon {
+  position: relative;
+  top: 35%;
+  width: 50%;
+}
+
+.functions {
+  font-size: 12px;
+  padding-left: 50px;
+  padding-right: 60px;
+  text-align: center;
+  height: 40px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */
