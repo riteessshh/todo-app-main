@@ -39,3 +39,19 @@ $(".moon-ico").click(() => {
   $(".functions").toggleClass("dark-theme");
   $(".functions").toggleClass("light-theme");
 })
+
+list = []
+function print() {
+  value = document.getElementById("input-data").value;
+  // console.log(value);
+  list.push(value);
+  console.log(list);
+
+  list.map( (item) => {
+    document.getElementById("output").innerHTML = text;
+  })
+}
+
+// list.map( (item) => {
+//   document.getElementById("output").innerHTML = item;
+// })
