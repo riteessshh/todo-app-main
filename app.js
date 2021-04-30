@@ -103,6 +103,8 @@ for (i = 0; i < close.length; i++) {
     var div = this.parentElement;
     div.style.display = "none";
   }
+  var totalItems = document.getElementsByTagName("li").length
+  document.getElementById("leftItems").innerHTML = totalItems;
 }
 
 var list = document.querySelector('ul');
