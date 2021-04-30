@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .background {
@@ -30,8 +31,10 @@ body {
 }
 
 .heading-section {
+  position: relative;
   color: white;
   height: 50px;
+  margin-bottom: 30px;
 }
 
 .sun-ico {
@@ -98,7 +101,7 @@ input {
 }
 
 ul {
-  list-style-type: circle;
+  list-style-type: none;
   list-style-position: inside;
 }
 ul .checked {
@@ -107,43 +110,69 @@ ul .checked {
 
 li {
   position: relative;
-  left: -19%;
+  left: -15%;
   width: 100%;
-  margin: 10px;
   height: 2rem;
   cursor: pointer;
   position: relative;
-  padding: 12px 8px 8px 30px;
+  padding: 20px 14px 8px 24px;
   font-size: 18px;
-  transition: 0.2s;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid white;
 }
 
 .close {
   position: absolute;
   right: 0;
   top: 0;
-  padding: 16px 16px 12px 16px;
+  padding: 20px 16px 12px 16px;
 }
 
 .checked {
   text-decoration: line-through;
 }
 
-.functions {
-  font-size: 12px;
-  padding-left: 50px;
-  padding-right: 60px;
-  text-align: center;
-  height: 40px;
-  position: relative;
+.features {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 0;
+  text-align: center;
+  position: relative;
+  top: -16px;
+  width: 100%;
+  margin: 0;
+}
+
+.display-section {
+  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.functions {
+  align-self: center;
+}
+.functions span {
+  padding: 3px;
+}
+
+#remove, #active, #all {
+  cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  .main-section {
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    width: 40%;
+  }
+
+  li {
+    left: -7%;
+    width: 100.2%;
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
