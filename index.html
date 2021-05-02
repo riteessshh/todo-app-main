@@ -17,24 +17,21 @@
 
 <body>
   <div class="background background-dark">
-    <img src="images/bg-mobile-dark.jpg" class="mobile-dark-img background-img img-dark dark-bg" alt="">
-    <img src="images/bg-mobile-light.jpg" class="mobile-light-img background-img img-light light-bg" alt="">
-    <!-- <img src="images/bg-desktop-dark.jpg" class="desktop-dark-img background-img img-dark dark-bg" alt="">
-    <img src="images/bg-desktop-light.jpg" class="desktop-light-img background-img img-light light-bg" alt=""> -->
+    <img src="images/bg-mobile-dark.jpg" style="display:none;" class="mobile-dark-img background-img" alt="">
+    <img src="images/bg-mobile-light.jpg" style="display:none;" class="mobile-light-img background-img" alt="">
+    <img src="images/bg-desktop-dark.jpg" class="desktop-dark-img background-img" alt="">
+    <img src="images/bg-desktop-light.jpg" style="display:none;" class="desktop-light-img background-img" alt="">
   </div>
 
   <div class="main-section">
     <div class="heading-section">
-      <h1>Todo</h1>
+      <h1 style="letter-spacing:1.2rem;">TODO</h1>
       <img src="images/icon-sun.svg" class="sun-ico dark-bg" alt="">
       <img src="images/icon-moon.svg" class="moon-ico light-bg" alt="">
     </div>
     <div class="body-section">
       <div class="input-section dark-theme">
-        <div class="checkbox-div">
-          <input type="radio" class="checkbox" name="" value="">
-        </div>
-        <input type="text" class="input-area dark-theme" onchange="print()" id="input-data" placeholder="Add Task">
+        <input type="text" class="input-area dark-theme" onchange="print()" id="input-data" placeholder="Create a new todo...">
       </div>
       <div class="display-section">
         <div class="list">
@@ -44,7 +41,7 @@
             <li class="dark-theme">Click on CROSS to remove</li>
           </ul>
           <div class="features dark-theme">
-            <p><span id="leftItems"></span> - left</p>
+            <p><span id="leftItems"></span> items left</p>
             <div class="functions">
               <span id="all">All</span>
               <span id="active">Active</span>
@@ -54,15 +51,15 @@
           </div>
         </div>
       </div>
+        <p style="text-align:center; color:hsl(234, 39%, 85%);">Drag and drop to reorder list</p>
     </div>
-
   </div>
-
-  <p style="text-align:center;">Drag and drop to reorder list</p>
   </div>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sortable/0.9.13/jquery-sortable-min.js" integrity="sha512-9pm50HHbDIEyz2RV/g2tn1ZbBdiTlgV7FwcQhIhvykX6qbQitydd6rF19iLmOqmJVUYq90VL2HiIUHjUMQA5fw==" crossorigin="anonymous"></script>
   <script src="app.js" charset="utf-8"></script>
 </body>
 

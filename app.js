@@ -1,16 +1,15 @@
+if ($(window).width() > 480 ) {
+  $(".desktop-dark-img").css("display", "block")
+  $(".mobile-dark-img").css("display", "none")
+} else if ($(window).width() < 480 ) {
+  $(".mobile-dark-img").css("display", "block")
+  $(".desktop-dark-img").css("display", "none")
+}
 $(".sun-ico").click(() => {
   $(".background").toggleClass("background-dark");
   $(".background").toggleClass("background-light");
-  $(window).width() <= 480 ? $(".mobile-dark-img").toggleClass("dark-bg") : $(".desktop-dark-img").toggleClass("dark-bg");
-  $(window).width() <= 480 ? $(".mobile-dark-img").toggleClass("light-bg") : $(".desktop-dark-img").toggleClass("light-bg");
-  // $(".img-dark").toggleClass("dark-bg");
-  // $(".img-dark").toggleClass("light-bg");
   $(".sun-ico").toggleClass("dark-bg");
   $(".sun-ico").toggleClass("light-bg");
-  $(window).width() <= 480 ? $(".mobile-light-img").toggleClass("dark-bg") : $(".desktop-light-img").toggleClass("dark-bg");
-  $(window).width() <= 480 ? $(".mobile-light-img").toggleClass("light-bg") : $(".desktop-light-img").toggleClass("light-bg");
-  // $(".img-light").toggleClass("dark-bg");
-  // $(".img-light").toggleClass("light-bg");
   $(".moon-ico").toggleClass("dark-bg");
   $(".moon-ico").toggleClass("light-bg");
   $(".input-section").toggleClass("dark-theme");
@@ -21,21 +20,21 @@ $(".sun-ico").click(() => {
   $("li").toggleClass("light-theme");
   $(".features").toggleClass("dark-theme");
   $(".features").toggleClass("light-theme");
+  if ($(window).width() > 480 ) {
+    $(".desktop-dark-img").css("display", "none")
+    $(".desktop-light-img").css("display", "block")
+  }else if ($(window).width() < 480 ) {
+    $(".mobile-dark-img").css("display", "none")
+    $(".mobile-light-img").css("display", "block")
+  }
 })
+
 
 $(".moon-ico").click(() => {
   $(".background").toggleClass("background-dark");
   $(".background").toggleClass("background-light");
-  $(window).width() <= 480 ? $(".mobile-dark-img").toggleClass("dark-bg") : $(".desktop-dark-img").toggleClass("dark-bg");
-  $(window).width() <= 480 ? $(".mobile-dark-img").toggleClass("light-bg") : $(".desktop-dark-img").toggleClass("light-bg");
-  // $(".img-dark").toggleClass("dark-bg");
-  // $(".img-dark").toggleClass("light-bg");
   $(".sun-ico").toggleClass("dark-bg");
   $(".sun-ico").toggleClass("light-bg");
-  $(window).width() <= 480 ? $(".mobile-light-img").toggleClass("dark-bg") : $(".desktop-light-img").toggleClass("dark-bg");
-  $(window).width() <= 480 ? $(".mobile-light-img").toggleClass("light-bg") : $(".desktop-light-img").toggleClass("light-bg");
-  // $(".img-light").toggleClass("dark-bg");
-  // $(".img-light").toggleClass("light-bg");
   $(".moon-ico").toggleClass("dark-bg");
   $(".moon-ico").toggleClass("light-bg");
   $(".input-section").toggleClass("dark-theme");
@@ -46,16 +45,20 @@ $(".moon-ico").click(() => {
   $("li").toggleClass("light-theme");
   $(".features").toggleClass("dark-theme");
   $(".features").toggleClass("light-theme");
+  if ($(window).width() > 480 ) {
+    $(".desktop-dark-img").css("display", "block")
+    $(".desktop-light-img").css("display", "none")
+  }else if ($(window).width() < 480 ) {
+    $(".mobile-dark-img").css("display", "block")
+    $(".mobile-light-img").css("display", "none")
+  }
 })
-
-// $(window).width() <= 480 ? 'bubble' : 'bottom';
-
 
 function print() {
   value = document.getElementById("input-data").value;
-  var node = document.createElement("LI"); // Create a <li> node
-  var textnode = document.createTextNode(value); // Create a text node
-  node.appendChild(textnode); // Append the text to <li>
+  var node = document.createElement("LI");               // Create a <li> node
+  var textnode = document.createTextNode(value);         // Create a text node
+  node.appendChild(textnode);                            // Append the text to <li>
   if (value === '') {
     alert("You must write something!");
   } else {
@@ -101,7 +104,7 @@ var i;
 for (i = 0; i < close.length; i++) {
   close[i].onclick = function() {
     var div = this.parentElement;
-    div.style.display = "none";
+    div.remove();
   }
   var totalItems = document.getElementsByTagName("li").length
   document.getElementById("leftItems").innerHTML = totalItems;
@@ -126,6 +129,8 @@ $("#remove").click(() => {
 $("#active").click(() => {
   var completed = $(".checked");
   completed.hide();
+  var all = $("li");
+  all.not(".checked").show();
   var totalItems = document.getElementsByTagName("li").length
   document.getElementById("leftItems").innerHTML = totalItems;
 })
@@ -137,22 +142,13 @@ $("#all").click(() => {
   document.getElementById("leftItems").innerHTML = totalItems;
 })
 
-// document.onchange(() => {
-//   var totalItems = document.getElementsByTagName("li").length
-//   document.getElementById("leftItems").innerHTML = totalItems;
-// })
+$("#checkers").click(() => {
+    var done = $("li");
+    // done.hide();
+    done.not(".checked").hide();
+})
 
-// window.onload((event) => {
-//   var totalItems = document.getElementsByTagName("li").length
-//   document.getElementById("leftItems").innerHTML = totalItems;
-// })
-
-// var totalItems = document.getElementsByTagName("LI")
-// document.getElementsById("leftItems").appendChild(totalItems.length)
-
-// $("#checkers").click(() => {
-//   // var completed = $(".checked");
-//   if ($("li").hasClass(".checked")) {
-//     this.hide();
-//   }
-// })
+if ($(window).width() > 1200) {
+  $("#mylist").sortable();
+  $("#mylist").disableSelection();
+}
