@@ -1,10 +1,12 @@
 body
   margin: 0
   font-family: 'Josefin Sans', sans-serif
+  overflow-x: hidden
 
 .background
   position: relative
   height: 800px
+  width: 100%
 
 .desktop-dark-img, .desktop-light-img
   width: 100%
@@ -123,7 +125,7 @@ li
 
 .checked
   text-decoration: line-through
-  color: hsl(237, 14%, 26%)
+  color: hsl(234, 11%, 52%)
 
 .features
   display: grid
@@ -153,8 +155,28 @@ li
 #remove:hover
   color: white
 
+@media (min-width: 420px)
+  li
+    left: -13.4%
+    width: 100.8%
+    // padding-top: 15px
+    margin: 0
+
+@media (min-width: 700px)
+  li
+    left: -7%
+    width: 100.2%
+    // padding-top: 15px
+    margin: 0
+
+@media (min-width: 1000px)
+  li
+    left: -5.1%
 
 @media (min-width: 1200px)
+
+  .background
+    height: 961px
 
   .main-section
     position: absolute
@@ -163,8 +185,8 @@ li
     width: 40%
 
   li
-    left: -7%
-    width: 100.2%
+    left: -7.5%
+    width: 100.4%
     // padding-top: 15px
     margin: 0
 

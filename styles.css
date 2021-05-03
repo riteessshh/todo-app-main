@@ -1,11 +1,13 @@
 body {
   margin: 0;
   font-family: "Josefin Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 .background {
   position: relative;
   height: 800px;
+  width: 100%;
 }
 
 .desktop-dark-img, .desktop-light-img {
@@ -148,7 +150,7 @@ li .dark-theme {
 
 .checked {
   text-decoration: line-through;
-  color: #393a4c;
+  color: #777a92;
 }
 
 .features {
@@ -185,7 +187,30 @@ li .dark-theme {
   color: white;
 }
 
+@media (min-width: 420px) {
+  li {
+    left: -13.4%;
+    width: 100.8%;
+    margin: 0;
+  }
+}
+@media (min-width: 700px) {
+  li {
+    left: -7%;
+    width: 100.2%;
+    margin: 0;
+  }
+}
+@media (min-width: 1000px) {
+  li {
+    left: -5.1%;
+  }
+}
 @media (min-width: 1200px) {
+  .background {
+    height: 961px;
+  }
+
   .main-section {
     position: absolute;
     top: 15%;
@@ -194,8 +219,8 @@ li .dark-theme {
   }
 
   li {
-    left: -7%;
-    width: 100.2%;
+    left: -7.5%;
+    width: 100.4%;
     margin: 0;
   }
 
